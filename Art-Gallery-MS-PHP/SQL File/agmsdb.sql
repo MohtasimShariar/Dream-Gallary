@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 02, 2023 at 08:16 PM
--- Server version: 10.3.15-MariaDB
--- PHP Version: 7.2.19
+-- Generation Time: Sep 15, 2023 at 01:21 AM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 7.4.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -220,6 +219,54 @@ INSERT INTO `tblpage` (`ID`, `PageType`, `PageTitle`, `PageDescription`, `Email`
 (1, 'aboutus', 'About Us', '<span style=\"color: rgb(32, 33, 36); font-family: arial, sans-serif; font-size: 16px;\">An art gallery is&nbsp;</span><b style=\"color: rgb(32, 33, 36); font-family: arial, sans-serif; font-size: 16px;\">an exhibition space to display and sell artworks</b><span style=\"color: rgb(32, 33, 36); font-family: arial, sans-serif; font-size: 16px;\">. As a result, the art gallery is a commercial enterprise working with a portfolio of artists. The gallery acts as the dealer representing, supporting, and distributing the artworks by the artists in question.</span><br>', NULL, NULL, NULL, ''),
 (2, 'contactus', 'Contact Us', '890,Sector 62, Gyan Sarovar, GAIL Noida(Delhi/NCR)', 'info@gmail.com', 1234567890, NULL, '10:30 am to 7:30 pm');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbluser`
+--
+
+CREATE TABLE `tbluser` (
+  `user_id` int(11) NOT NULL,
+  `username` varchar(50) DEFAULT NULL,
+  `email` varchar(120) DEFAULT NULL,
+  `mobile_number` varchar(60) DEFAULT NULL,
+  `password` varchar(120) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbluser`
+--
+
+INSERT INTO `tbluser` (`user_id`, `username`, `email`, `mobile_number`, `password`, `created_at`) VALUES
+(1, 'Test', 'test@gmail.com', '01700000000', '12345', '2023-09-13 10:15:19'),
+(2, 'Test02', 'test2@gmail.com', '01700000000', '111222', '2023-09-13 10:39:44'),
+(4, 'Test03', 'test03@gmail.com', '01700000003', '1234567', '2023-09-13 10:41:50');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_for_comments`
+--
+
+CREATE TABLE `tbl_for_comments` (
+  `comment_id` int(120) NOT NULL,
+  `comment` varchar(500) NOT NULL,
+  `user_id` int(50) NOT NULL,
+  `art_id` int(50) NOT NULL,
+  `username` varchar(150) NOT NULL,
+  `commented_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_for_comments`
+--
+
+INSERT INTO `tbl_for_comments` (`comment_id`, `comment`, `user_id`, `art_id`, `username`, `commented_at`) VALUES
+(1, 'great', 1, 4, 'Test', '2023-09-14 18:35:56'),
+(5, 'Wonderful', 2, 4, 'Test02', '2023-09-14 18:45:37'),
+(6, 'Superb', 4, 4, 'Test03', '2023-09-14 19:20:58');
+
 --
 -- Indexes for dumped tables
 --
@@ -268,6 +315,18 @@ ALTER TABLE `tblpage`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indexes for table `tbluser`
+--
+ALTER TABLE `tbluser`
+  ADD PRIMARY KEY (`user_id`);
+
+--
+-- Indexes for table `tbl_for_comments`
+--
+ALTER TABLE `tbl_for_comments`
+  ADD PRIMARY KEY (`comment_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -312,6 +371,18 @@ ALTER TABLE `tblenquiry`
 --
 ALTER TABLE `tblpage`
   MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `tbluser`
+--
+ALTER TABLE `tbluser`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `tbl_for_comments`
+--
+ALTER TABLE `tbl_for_comments`
+  MODIFY `comment_id` int(120) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -3,15 +3,14 @@
         <div class="info-contact-agile">
             <?php
             session_start();
-            
-            
-
-
-$ret=mysqli_query($con,"select * from tblpage where PageType='contactus' ");
-$cnt=1;
-while ($row=mysqli_fetch_array($ret)) {
-
-?>
+            $user_id=$_SESSION['user_id'];
+            $ret=mysqli_query($con,"select * from tbluser where user_id='$user_id'");
+            $row=mysqli_fetch_array($ret);
+            $username=$row['username'];
+            $ret=mysqli_query($con,"select * from tblpage where PageType='contactus' ");
+            $cnt=1;
+            while ($row=mysqli_fetch_array($ret)) {
+                ?>
             <ul>
                 <li>
                     <span class="fas fa-phone-volume"></span>
@@ -26,10 +25,16 @@ while ($row=mysqli_fetch_array($ret)) {
             </ul><?php } ?>
         </div>
     </div>
-    <div class="container-fluid">
-        <div class="hedder-up row">
-            <div class="col-lg-3 col-md-3 logo-head">
-                <h1><a class="navbar-brand" href="index.php">Art Gallery</a></h1>
+    <div class="">
+        <div class="hedder-up ">
+            <div class="row">
+                <h1 class="col-md-6 nav_heading">Art Gallery</h1>
+                <?php
+                if(isset($_SESSION['user_id'])){
+                
+                    echo '<h1 class="nav_heading col-md-6 text-right">Welcome : <span class="text-secondary">'.$username.'</span> </h1>';
+                };
+                ?>
             </div>
         </div>
     </div>

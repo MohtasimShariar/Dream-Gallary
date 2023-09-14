@@ -2091,3 +2091,64 @@ button.login_btn {
     font-size: 20px;
     border: 1px;
 }
+
+.nav_heading {
+    font-size: 30px;
+    color: white;
+}
+
+section.comment_section.container {
+    border: 1px solid;
+    padding: 10px 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    height: 40px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #aaa;
+    background-color: transparent;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    resize: none;
+    outline: none;
+    transition: .5s
+}
+
+button.btn_comment {
+    box-sizing: border-box;
+    border: 1px solid #3535e7;
+    padding: 5px 15px;
+    background: #3535e7;
+    color: white;
+    font-size: 20px;
+}
+
+button.btn_cancel {
+    box-sizing: border-box;
+    border: 1px solid #e81111;
+    padding: 5px 15px;
+    background: #e81111;
+    color: white;
+    font-size: 20px;
+}
+
+.comment_container.container {
+    position: relative;
+    background: #d8e8e5;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+}
+
+p.comment_username {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+p.time_gap {
+    position: absolute;
+    right: 0;
+    top: 0;
+}

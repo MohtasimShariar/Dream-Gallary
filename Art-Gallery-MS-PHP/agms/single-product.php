@@ -1,11 +1,35 @@
 <?php
-session_start();
-error_reporting(0);
-include('includes/dbconnection.php');
-if(!isset($_SESSION['user_id'])){
-   echo '<script>alert("you must login first")</script>';
-   header ('location:logout.php');
-}
+    session_start();
+    error_reporting(0);
+    include('includes/dbconnection.php');
+    
+    if(!isset($_SESSION['user_id'])){
+            echo '<script>alert("you must login first")</script>';
+            header ('location:logout.php');
+    }
+    $user_id = $_SESSION['user_id'];
+    $ret=mysqli_query($con,"select * from tbluser where user_id='$user_id'");
+    $row=mysqli_fetch_array($ret);
+    $username=$row['username'];
+    $art_id = $_GET['pid'];
+
+    if(isset($_POST["submit_comment"]))
+    {
+        $comment = $_POST['comment'];
+        
+        $query=mysqli_query($con, "insert into tbl_for_comments(comment, user_id, art_id, username) value('$comment', '$user_id', '$art_id', '$username')");
+        if($query){
+            echo "<script>alert('You have commented');</script>";
+        }
+        else{
+            echo "<script>alert('Unexpected error occurred');</script>";
+        }
+    }
+    
+    
+    
+
+    
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -69,10 +93,10 @@ if(!isset($_SESSION['user_id'])){
                 <div class="inner-sec-shop pt-lg-4 pt-3">
                     <?php
                $pid=$_GET['pid'];
-$ret=mysqli_query($con,"select tblarttype.ID as atid,tblarttype.ArtType as typename,tblartmedium.ID as amid,tblartmedium.ArtMedium as amname,tblartproduct.ID as apid,tblartist.Name,tblartproduct.Title,tblartproduct.Dimension,tblartproduct.Orientation,tblartproduct.Size,tblartproduct.Artist,tblartproduct.ArtType,tblartproduct.ArtMedium,tblartproduct.SellingPricing,tblartproduct.Description,tblartproduct.Image,tblartproduct.Image1,tblartproduct.Image2,tblartproduct.Image3,tblartproduct.Image4,tblartproduct.RefNum,tblartproduct.ArtType from tblartproduct join tblarttype on tblarttype.ID=tblartproduct.ArtType join tblartmedium on tblartmedium.ID=tblartproduct.ArtMedium join tblartist on tblartist.ID=tblartproduct.Artist where tblartproduct.ID='$pid'");
-$cnt=1;
-while ($row=mysqli_fetch_array($ret)) {
-?>
+        $ret=mysqli_query($con,"select tblarttype.ID as atid,tblarttype.ArtType as typename,tblartmedium.ID as amid,tblartmedium.ArtMedium as amname,tblartproduct.ID as apid,tblartist.Name,tblartproduct.Title,tblartproduct.Dimension,tblartproduct.Orientation,tblartproduct.Size,tblartproduct.Artist,tblartproduct.ArtType,tblartproduct.ArtMedium,tblartproduct.SellingPricing,tblartproduct.Description,tblartproduct.Image,tblartproduct.Image1,tblartproduct.Image2,tblartproduct.Image3,tblartproduct.Image4,tblartproduct.RefNum,tblartproduct.ArtType from tblartproduct join tblarttype on tblarttype.ID=tblartproduct.ArtType join tblartmedium on tblartmedium.ID=tblartproduct.ArtMedium join tblartist on tblartist.ID=tblartproduct.Artist where tblartproduct.ID='$pid'");
+        $cnt=1;
+            while ($row=mysqli_fetch_array($ret)) {
+            ?>
                     <div class="row">
                         <div class="col-lg-4 single-right-left ">
                             <div class="grid images_3_of_2">
@@ -183,6 +207,36 @@ while ($row=mysqli_fetch_array($ret)) {
             </div>
         </section>
         <!--subscribe-address-->
+
+
+
+        <section class="comment_section container">
+            <form method="POST" class="comment_form" action="">
+                <textarea name="comment" class="comment" placeholder="comment here"></textarea>
+                <button type="submit" name="submit_comment" class="btn_comment">Comment</button>
+            </form>
+        </section>
+        <section class="all_comments">
+            <h1 class='text-primary text-center'> Comments on this products</h1>
+            <?php
+                $art_id = $_GET['pid'];
+                $result=mysqli_query($con,"select * from tbl_for_comments where art_id='$art_id'");
+                while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+                    $time_diff = floor((time() - strtotime($row['commented_at']))/60);
+                    echo "
+                        <div class='comment_box'>
+                            <div class='comment_container container'>
+                            <p class='comment_username'>".$row['username']."</p>
+                            <p class='comment_msg'>".$row['comment']." </p>
+                            <p class='time_gap'>".$time_diff." mins ago</p>
+                            </div>
+                        </div>
+                    ";
+
+                }
+            ?>
+        </section>
+
 
 
         <?php include_once('includes/footer.php');?>
