@@ -219,16 +219,37 @@
         <section class="all_comments">
             <h1 class='text-primary text-center'> Comments on this products</h1>
             <?php
+            function get_time_ago( $time )
+            {
+                $time_difference = time() - $time;
+                if( $time_difference < 1 ) { return 'less than 1 second ago'; }
+                $condition = array( 12 * 30 * 24 * 60 * 60 =>  'year',
+                            30 * 24 * 60 * 60       =>  'month',
+                            24 * 60 * 60            =>  'day',
+                            60 * 60                 =>  'hour',
+                            60                      =>  'minute',
+                            1                       =>  'second'
+                );
+                foreach( $condition as $secs => $str )
+                {
+                    $d = $time_difference / $secs;
+
+                    if( $d >= 1 )
+                    {
+                        $t = round( $d );
+                        return $t . ' ' . $str . ( $t > 1 ? 's' : '' ) . ' ago';
+                    }
+                }
+            }
                 $art_id = $_GET['pid'];
                 $result=mysqli_query($con,"select * from tbl_for_comments where art_id='$art_id'");
-                while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-                    $time_diff = floor((time() - strtotime($row['commented_at']))/60);
+                while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){ 
                     echo "
                         <div class='comment_box'>
                             <div class='comment_container container'>
                             <p class='comment_username'>".$row['username']."</p>
                             <p class='comment_msg'>".$row['comment']." </p>
-                            <p class='time_gap'>".$time_diff." mins ago</p>
+                            <p class='time_gap'>".get_time_ago(strtotime($row['commented_at']))."</p>
                             </div>
                         </div>
                     ";
