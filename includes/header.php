@@ -28,7 +28,7 @@
     <div class="">
         <div class="hedder-up ">
             <div class="row">
-                <h1 class="col-md-6 nav_heading">Art Gallery</h1>
+                <h1 class="col-md-6 nav_heading">Dream Gallery</h1>
                 <?php
                 if(isset($_SESSION['user_id'])){
                 
@@ -57,7 +57,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Art Type
+                        Photo Category
                     </a>
 
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">

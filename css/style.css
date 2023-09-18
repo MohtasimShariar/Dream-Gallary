@@ -259,15 +259,18 @@ h5#exampleModalLabel {
 /*--//model--*/
 /*-- banner --*/
 .one-img {
-    background: url(../images/b1.jpg)no-repeat center;
+    /* background: url(../images/b1.jpg)no-repeat center; */
+    background: lightblue;
 }
 
 .two-img {
-    background: url(../images/b2.jpg)no-repeat center;
+    /* background: url(../images/b2.jpg)no-repeat center; */
+    background: lightseagreen;
 }
 
 .three-img {
-    background: url(../images/b3.jpg)no-repeat center;
+    /* background: url(../images/b3.jpg)no-repeat center; */
+    background: #03a477;
 }
 
 .slider-img {
@@ -571,7 +574,8 @@ border: 4px solid #d24055;
 /*-- inner-banner --*/
 .inner_page-banner {
     text-align: center;
-    background: url(../images/b2.jpg) no-repeat center;
+    /* background: url(../images/b2.jpg) no-repeat center; */
+    background: #05a;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -604,7 +608,9 @@ ul.short_ls li {
 .blog,
 .premium,
 .sub-below-address {
-    background: #26bb48;
+    background: #055772;
+    border-top-left-radius: 20rem;
+    border-bottom-right-radius: 20rem;
 }
 
 /*--//blog--*/
@@ -963,7 +969,6 @@ bottom:-86px}
 }
 
 .address-w3l-right {
-    background: #ffcb2d;
     padding: 2em 0em;
 }
 

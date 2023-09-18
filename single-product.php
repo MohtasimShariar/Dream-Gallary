@@ -160,7 +160,7 @@
                             <div class="occasional">
                                 <h5>Art Types : <?php echo $row['typename'];?></h5>
 
-                                <h5>Art Medium : <?php echo $row['amname'];?></h5>
+                                <h5>Price : <?php echo $row['SellingPricing'];?></h5>
                                 <h5>Art Reference Number : <?php echo $row['RefNum'];?></h5>
 
                                 <div class="clearfix"> </div>
@@ -209,7 +209,7 @@
         <!--subscribe-address-->
 
 
-
+        <!-- 
         <section class="comment_section container">
             <form method="POST" class="comment_form" action="">
                 <textarea name="comment" class="comment" placeholder="comment here"></textarea>
@@ -256,7 +256,7 @@
 
                 }
             ?>
-        </section>
+        </section> -->
 
 
 
