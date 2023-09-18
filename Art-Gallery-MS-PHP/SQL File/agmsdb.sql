@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 18, 2023 at 11:37 PM
+-- Generation Time: Sep 18, 2023 at 11:55 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.4.20
 
@@ -266,7 +266,9 @@ INSERT INTO `tbl_for_comments` (`comment_id`, `comment`, `user_id`, `art_id`, `u
 (1, 'great', 1, 4, 'Test', '2023-09-14 18:35:56'),
 (5, 'Wonderful', 2, 4, 'Test02', '2023-09-14 18:45:37'),
 (6, 'Superb', 4, 4, 'Test03', '2023-09-14 19:20:58'),
-(7, 'Special work', 1, 5, 'Test', '2023-09-16 06:37:23');
+(7, 'Special work', 1, 5, 'Test', '2023-09-16 06:37:23'),
+(9, 'wow', 1, 2, 'Test', '2023-09-18 17:49:14'),
+(10, 'Fantastic', 1, 5, 'Test', '2023-09-18 17:54:24');
 
 --
 -- Indexes for dumped tables
@@ -383,7 +385,7 @@ ALTER TABLE `tbluser`
 -- AUTO_INCREMENT for table `tbl_for_comments`
 --
 ALTER TABLE `tbl_for_comments`
-  MODIFY `comment_id` int(120) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `comment_id` int(120) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
