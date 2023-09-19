@@ -93,7 +93,7 @@
                 <div class="inner-sec-shop pt-lg-4 pt-3">
                     <?php
                $pid=$_GET['pid'];
-        $ret=mysqli_query($con,"select tblarttype.ID as atid,tblarttype.ArtType as typename,tblartmedium.ID as amid,tblartmedium.ArtMedium as amname,tblartproduct.ID as apid,tblartist.Name,tblartproduct.Title,tblartproduct.Dimension,tblartproduct.Orientation,tblartproduct.Size,tblartproduct.Artist,tblartproduct.ArtType,tblartproduct.ArtMedium,tblartproduct.SellingPricing,tblartproduct.Description,tblartproduct.Image,tblartproduct.Image1,tblartproduct.Image2,tblartproduct.Image3,tblartproduct.Image4,tblartproduct.RefNum,tblartproduct.ArtType from tblartproduct join tblarttype on tblarttype.ID=tblartproduct.ArtType join tblartmedium on tblartmedium.ID=tblartproduct.ArtMedium join tblartist on tblartist.ID=tblartproduct.Artist where tblartproduct.ID='$pid'");
+        $ret=mysqli_query($con,"select tblarttype.ID as atid,tblarttype.ArtType as typename,tblartproduct.ID as apid,tblartist.Name,tblartproduct.Title,tblartproduct.Dimension,tblartproduct.Orientation,tblartproduct.Size,tblartproduct.Artist,tblartproduct.ArtType,tblartproduct.ArtMedium,tblartproduct.SellingPricing,tblartproduct.Description,tblartproduct.Image,tblartproduct.Image1,tblartproduct.Image2,tblartproduct.Image3,tblartproduct.Image4,tblartproduct.RefNum,tblartproduct.ArtType from tblartproduct join tblarttype on tblarttype.ID=tblartproduct.ArtType join tblartist on tblartist.ID=tblartproduct.Artist where tblartproduct.ID='$pid'");
         $cnt=1;
             while ($row=mysqli_fetch_array($ret)) {
             ?>
@@ -151,17 +151,17 @@
 
                             <div class="color-quality">
                                 <div class="color-quality-right">
-                                    <h5>Size : <?php echo $row['Size'];?></h5>
-                                    <h5>Dimension : <?php echo $row['Dimension'];?></h5>
+                                    <!-- <h5>Size : <?php echo $row['Size'];?></h5>
+                                    <h5>Dimension : <?php echo $row['Dimension'];?></h5> -->
                                     <h5>Orientation : <?php echo $row['Orientation'];?></h5>
 
                                 </div>
                             </div>
                             <div class="occasional">
-                                <h5>Art Types : <?php echo $row['typename'];?></h5>
+                                <h5>Photo Category : <?php echo $row['typename'];?></h5>
 
                                 <h5>Price : <?php echo $row['SellingPricing'];?></h5>
-                                <h5>Art Reference Number : <?php echo $row['RefNum'];?></h5>
+                                <h5>Photo Reference Number : <?php echo $row['RefNum'];?></h5>
 
                                 <div class="clearfix"> </div>
                             </div>
@@ -170,7 +170,8 @@
                                 <div>
                                     <h4>
                                         <button class="btn btn-success"><a
-                                                href="art-enquiry.php?eid=<?php echo $row['apid'];?>">Enquiry</a></button>
+                                                href="art-enquiry.php?eid=<?php echo $row['apid'];?>">Add
+                                                cart</a></button>
                                     </h4>
 
                                 </div>

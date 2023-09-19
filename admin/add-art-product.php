@@ -16,7 +16,7 @@ if(isset($_POST['submit']))
     $size=$_POST['size'];
     $artist=$_POST['artist'];
     $arttype=$_POST['arttype'];
-    $artmed=$_POST['artmed'];
+    // $artmed=$_POST['artmed'];
     $sprice=$_POST['sprice'];
     $description=$_POST['description'];
     $refno=mt_rand(100000000, 999999999);
@@ -72,7 +72,7 @@ $pic=md5($pic).time().$extension;
      //move_uploaded_file($_FILES["image2"]["tmp_name"],"images/".$pic2);
      //move_uploaded_file($_FILES["image3"]["tmp_name"],"images/".$pic3);
      //move_uploaded_file($_FILES["image4"]["tmp_name"],"images/".$pic4);
-    $query=mysqli_query($con, "insert into tblartproduct(Title,Dimension,Orientation,Size,Artist, ArtType,ArtMedium,SellingPricing,Description,Image,Image1,Image2,Image3,Image4,RefNum) value('$title','$dimension','$orientation','$size','$artist','$arttype','$artmed','$sprice','$description','$pic','$pic1','$pic2','$pic3','$pic4','$refno')");
+    $query=mysqli_query($con, "insert into tblartproduct(Title,Dimension,Orientation,Size,Artist, ArtType,SellingPricing,Description,Image,Image1,Image2,Image3,Image4,RefNum) value('$title','$dimension','$orientation','$size','$artist','$arttype','$sprice','$description','$pic','$pic1','$pic2','$pic3','$pic4','$refno')");
     if ($query) {
 echo "<script>alert('Art product details has been submitted.');</script>";
 echo "<script>window.location.href ='add-art-product.php'</script>";

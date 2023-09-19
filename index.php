@@ -7,7 +7,7 @@ include('includes/dbconnection.php');
 <html lang="zxx">
 
     <head>
-        <title>Dream Gallery | Home Page</title>
+        <title>Art Gallery Management System | Home Page</title>
 
         <script>
         addEventListener("load", function() {
@@ -57,7 +57,32 @@ include('includes/dbconnection.php');
                             </div>
                         </div>
                     </li>
-                    
+                    <li>
+                        <div class="slider-img two-img">
+                            <div class="container">
+                                <div class="slider-info ">
+                                    <h5>Sort Art And Painting<br>For Your Choice</h5>
+                                    <div class="bottom-info">
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo
+                                            ligula eget dolorL orem ipsum dolor sit amet eget dolor</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slider-img three-img">
+                            <div class="container">
+                                <div class="slider-info">
+                                    <h5>Best Art And Painting<br> For Your Choice</h5>
+                                    <div class="bottom-info">
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo
+                                            ligula eget dolorL orem ipsum dolor sit amet eget dolor</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
             <!-- This is here just to demonstrate the callbacks -->
