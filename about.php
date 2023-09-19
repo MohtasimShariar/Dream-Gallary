@@ -8,7 +8,7 @@ include('includes/dbconnection.php');
 <html lang="zxx">
 
     <head>
-        <title>Art Gallery Management System | About Us Page</title>
+        <title>Dream Gallery| About Us Page</title>
 
         <script>
         addEventListener("load", function() {
@@ -75,7 +75,7 @@ while ($row=mysqli_fetch_array($ret)) {
                     </div>
                 </div>
                 <div class="about-sub-inner text-center mt-lg-4 mt-3">
-                    <h4>Art Gallery
+                    <h4>Dream Gallery
                     </h4>
                     <div class="row">
                         <div class="col-lg-4 col-md-4 abut-gride">

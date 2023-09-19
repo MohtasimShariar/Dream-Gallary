@@ -28,7 +28,7 @@ $name=$row['AdminName'];
 
 
                <!-- alert notification start-->
-               <li id="alert_notificatoin_bar" class="dropdown">
+               <!-- <li id="alert_notificatoin_bar" class="dropdown">
                    <?php                                        
 $ret1=mysqli_query($con,"select *from  tblenquiry where (Status='' ||  Status is null)");
 $num1=mysqli_num_rows($ret1);?>
@@ -62,7 +62,7 @@ while ($row1=mysqli_fetch_array($ret1)) { ?>
 
 
                    </ul>
-               </li>
+               </li> -->
                <!-- alert notification end-->
                <!-- user login dropdown start-->
                <li class="dropdown">

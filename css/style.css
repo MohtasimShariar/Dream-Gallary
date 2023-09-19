@@ -259,19 +259,11 @@ h5#exampleModalLabel {
 /*--//model--*/
 /*-- banner --*/
 .one-img {
-    /* background: url(../images/b1.jpg)no-repeat center; */
-    background: lightblue;
+    background: url(../images/b1.jpg)no-repeat center;
+    /* background: lightblue; */
 }
 
-.two-img {
-    /* background: url(../images/b2.jpg)no-repeat center; */
-    background: lightseagreen;
-}
 
-.three-img {
-    /* background: url(../images/b3.jpg)no-repeat center; */
-    background: #03a477;
-}
 
 .slider-img {
     background-size: cover;
