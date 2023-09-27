@@ -28,13 +28,47 @@
     <div class="">
         <div class="hedder-up ">
             <div class="row">
-                <h1 class="col-md-6 nav_heading">Dream Gallery</h1>
+                <div class="col-md-6">
+                    <h1 class="nav_heading ">Dream Gallery</h1>
+                </div>
+
+
                 <?php
                 if(isset($_SESSION['user_id'])){
+                $user_id = $_SESSION['user_id'];
+                $ret=mysqli_query($con,"select tblenquiry.user_id, tblenquiry.Artpdid,
+                tblenquiry.Quantity, tblartproduct.ID, tblartproduct.Title from tblartproduct  join tblenquiry on tblenquiry.Artpdid = tblartproduct.ID where tblenquiry.user_id='$user_id'");
+                // print_r($ret);
+                // $row=mysqli_fetch_array($ret);
                 
-                    echo '<h1 class="nav_heading col-md-6 text-right">Welcome : <span class="text-secondary">'.$username.'</span> </h1>';
-                };
-                ?>
+                    echo '
+                    <div class="cart_container col-md-6">
+                        <div class="cart">
+                            <button class="cart-btn">
+                                cart
+                            </button>
+                            <div id="cart-details" class="cart-details">
+                            <span>welcome: '.$username.'</span>
+                                <p>Your items are: </p>
+                                ';
+                
+                while($row=mysqli_fetch_array($ret)){
+                    ?>
+                <div class="d-flex justify-content-between">
+                    <p class="p-2 border border-1 border-dark"><?php echo $row['Title'];?></p>
+                    <p class="p-2 border border-1 border-dark"><?php echo $row['Quantity'];?></p>
+                </div>
+
+
+                <?php }
+                echo '
+            </div>
+        </div>
+
+    </div>
+    ';
+    }
+    ?>
             </div>
         </div>
     </div>
@@ -133,3 +167,25 @@ while ($row=mysqli_fetch_array($ret)) {
     </div>
 </div>
 <!-- //Modal 1-->
+<script>
+// JavaScript to show/hide the cart dropdown
+function myFunction() {
+    document.getElementById("cart-details").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('.cart-btn')) {
+        var dropdowns = document.getElementsByClassName("cart-details");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    } else {
+        myFunction();
+    }
+}
+</script>
