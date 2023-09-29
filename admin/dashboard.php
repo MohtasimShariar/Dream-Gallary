@@ -93,28 +93,28 @@ $artcount=mysqli_num_rows($query);
                         </div>
                         <!--/.col-->
 
-                        <!-- <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                             <div class="info-box brown-bg">
                                 <?php $query1=mysqli_query($con,"Select * from tblenquiry where Status='' || Status is null");
 $uenqcount=mysqli_num_rows($query1);
 ?>
                                 <i class="fa fa-file"></i>
                                 <div class="count"><?php echo $uenqcount;?></div>
-                                <div class="title"> <a class="dropdown-item" href="unanswer-enquiry.php">Total Unanswer
-                                        Enquiry</a></div>
+                                <div class="title"> <a class="dropdown-item" href="unanswer-enquiry.php">Total
+                                        Orders</a></div>
                             </div>
-                        </div> -->
-                        <!-- <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                             <div class="info-box brown-bg">
                                 <?php $query1=mysqli_query($con,"Select * from tblenquiry where Status='Answer'");
 $aenqcount=mysqli_num_rows($query1);
 ?>
                                 <i class="fa fa-file"></i>
                                 <div class="count"><?php echo $aenqcount;?></div>
-                                <div class="title"> <a class="dropdown-item" href="answer-enquiry.php">Total Answer
-                                        Enquiry</a></div>
+                                <div class="title"> <a class="dropdown-item" href="answer-enquiry.php">Total Review
+                                        Orders</a></div>
                             </div>
-                        </div> -->
+                        </div>
                         <!--/.col-->
 
 
@@ -137,17 +137,7 @@ $artcount=mysqli_num_rows($query2);
                         </div>
                         <!--/.col-->
 
-                        <!-- <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                            <div class="info-box brown-bg">
-                                <?php $query1=mysqli_query($con,"Select * from tblartmedium");
-$amcount=mysqli_num_rows($query1);
-?>
-                                <i class="fa fa-file"></i>
-                                <div class="count"><?php echo $amcount;?></div>
-                                <div class="title"> <a class="dropdown-item" href="manage-art-medium.php">Total Art
-                                        Medium</a></div>
-                            </div>
-                        </div> -->
+
                         <!--/.col-->
 
                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
