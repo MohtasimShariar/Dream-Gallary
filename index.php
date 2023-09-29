@@ -7,7 +7,7 @@ include('includes/dbconnection.php');
 <html lang="zxx">
 
     <head>
-        <title>Art Gallery Management System | Home Page</title>
+        <title>Dream Gallery | Home Page</title>
 
         <script>
         addEventListener("load", function() {
@@ -91,58 +91,8 @@ include('includes/dbconnection.php');
                </ul>-->
             <div class="clearfix"></div>
         </div>
-        <!-- about -->
-        <!-- <section class="about py-lg-4 py-md-3 py-sm-3 py-3" id="about">
-            <div class="container py-lg-5 py-md-5 py-sm-4 py-4">
-                <h3 class="title text-center mb-lg-5 mb-md-4  mb-sm-4 mb-3">Best Products</h3>
-                <div class="row banner-below-w3l">
-                    <div class="col-lg-4 col-md-6 col-sm-6 text-center banner-agile-flowers">
-                        <img src="images/a1.jpg" width="200" height="200" class="img-thumbnail" alt="">
-                        <div class="banner-right-icon">
-                            <h4 class="pt-3">Sculptures</h4>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 text-center banner-agile-flowers">
-                        <img src="images/a2.jpg" width="200" height="200" class="img-thumbnail" alt="">
-                        <div class="banner-right-icon">
-                            <h4 class="pt-3">Serigraphs</h4>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 text-center banner-agile-flowers">
-                        <img src="images/a3.jpg" width="200" height="200" class="img-thumbnail" alt="">
-                        <div class="banner-right-icon">
-                            <h4 class="pt-3">Prints</h4>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 mt-3 text-center banner-agile-flowers">
-                        <img src="images/a4.jpg" width="200" height="200" class="img-thumbnail" alt="">
-                        <div class="banner-right-icon">
-                            <h4 class="pt-3">Painting</h4>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 mt-3 text-center banner-agile-flowers">
-                        <img src="images/a5.jpg" width="200" height="200" class="img-thumbnail" alt="">
-                        <div class="banner-right-icon">
-                            <h4 class="pt-3">Street Art</h4>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 mt-3 text-center banner-agile-flowers">
-                        <img src="images/a6.jpg" width="500" height="200" class="img-thumbnail" alt="">
-                        <div class="banner-right-icon">
-                            <h4 class="pt-3">Visuals Arts</h4>
-                        </div>
-                    </div>
-                    <div class="toys-grids-upper">
-                        <div class="about-toys-off">
-                            <h2>Get Up to <span>70% Off </span>On Selected Art</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <!-- //about -->
-        <!--new Arrivals -->
-        <!-- <section class="blog py-lg-4 py-md-3 py-sm-3 py-3">
+
+        <section class="blog py-lg-4 py-md-3 py-sm-3 py-3">
             <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
                 <h3 class="title clr text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Photo Arrival</h3>
                 <div class="slid-img">
@@ -170,7 +120,7 @@ while ($row=mysqli_fetch_array($ret)) {
                     </ul>
                 </div>
             </div>
-        </section> -->
+        </section>
         <!--//about -->
 
 

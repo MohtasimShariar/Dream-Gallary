@@ -47,7 +47,7 @@ if(isset($_POST['send']))
 <html lang="zxx">
 
     <head>
-        <title>Art Gallery Management System | Art Enquiry</title>
+        <title>Dream Gallery || Add to cart</title>
 
         <script>
         addEventListener("load", function() {
@@ -89,7 +89,7 @@ if(isset($_POST['send']))
                         <a href="index.php">Home</a>
                         <span>/ /</span>
                     </li>
-                    <li>Enquiry</li>
+                    <li>Add to cart</li>
                 </ul>
             </div>
         </div>
