@@ -11,7 +11,7 @@ if(isset($_POST["submit"])){
     $query=mysqli_query($con, "insert into tbluser(username, email, mobile_number, password) value('$username', '$email', '$mobile_number', '$password')");
 
     if($query){
-        echo "<script>alert('User Added');</script>";
+        echo "<script>alert('You have successfully signed up. please login now');</script>";
         echo "<script>window.location.href ='login.php'</script>";
     }
     else{

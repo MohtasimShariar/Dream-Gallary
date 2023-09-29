@@ -55,8 +55,8 @@
                 while($row=mysqli_fetch_array($ret)){
                     ?>
                 <div class="d-flex justify-content-between">
-                    <p class="p-2 border border-1 border-dark"><?php echo $row['Title'];?></p>
-                    <p class="p-2 border border-1 border-dark"><?php echo $row['Quantity'];?></p>
+                    <p class="p-2 font-weight-bold"><?php echo $row['Title'];?></p>
+                    <p class="p-2 font-weight-bold"><?php echo $row['Quantity'];?></p>
                 </div>
 
 
