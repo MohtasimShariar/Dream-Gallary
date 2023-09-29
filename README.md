@@ -1,1 +1,1 @@
-"# E-photo-gallery-management-system" 
+"# dream-gallery-management-system" 
