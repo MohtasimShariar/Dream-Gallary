@@ -32,17 +32,6 @@
                     <li><a class="" href="manage-art-type.php">Manage Category</a></li>
                 </ul>
             </li>
-            <!-- <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_document_alt"></i>
-                          <span>Medium of Art</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" href="add-art-medium.php">Add Medium</a></li>
-              <li><a class="" href="manage-art-medium.php">Manage Medium</a></li>
-            </ul>
-          </li> -->
             <li class="sub-menu">
                 <a href="javascript:;" class="">
                     <i class="icon_document_alt"></i>
@@ -54,23 +43,23 @@
                     <li><a class="" href="manage-art-product.php">Manage Product</a></li>
                 </ul>
             </li>
-            <!-- <li class="sub-menu">
+            <li class="sub-menu">
                 <a href="javascript:;" class="">
                     <i class="icon_table"></i>
-                    <span>Enquiry</span>
+                    <span>Order</span>
                     <span class="menu-arrow arrow_carrot-right"></span>
                 </a>
                 <ul class="sub">
-                    <li><a class="" href="unanswer-enquiry.php">Unanswer Enquiry</a></li>
-                    <li><a class="" href="answer-enquiry.php">Answered Enquiry</a></li>
+                    <li><a class="" href="unanswer-enquiry.php">Order request</a></li>
+                    <li><a class="" href="answer-enquiry.php">Admin's review</a></li>
                 </ul>
-            </li> -->
-            <!-- <li>
+            </li>
+            <li>
                 <a class="" href="search.php">
                     <i class="icon_genius"></i>
-                    <span>Search Enquiry</span>
+                    <span>Search Order</span>
                 </a>
-            </li> -->
+            </li>
             <li class="sub-menu">
                 <a href="javascript:;" class="">
                     <i class="icon_documents_alt"></i>
